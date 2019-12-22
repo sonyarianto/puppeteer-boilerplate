@@ -3,7 +3,9 @@ const puppeteer = require('puppeteer-core');
 (async () => {
 	// set some options (set headless to false so we can see 
 	// this automated browsing experience)
-	let launchOptions = { headless: false, executablePath: '/usr/bin/google-chrome-stable', args: ['--start-maximized'] };
+	let launchOptions = { headless: false, 
+			      executablePath: '/usr/bin/google-chrome-stable', 
+			      args: ['--start-maximized'] };
 	
 	const browser = await puppeteer.launch(launchOptions);
 	const page = await browser.newPage();
